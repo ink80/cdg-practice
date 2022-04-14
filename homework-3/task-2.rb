@@ -1,16 +1,17 @@
-def create_pokemons
-  pokemons = []
-  print('How many pokemons you need? ')
-  quantity = gets.chomp.to_i
 
+print('How many pokemons you need? ')
+quantity = gets.chomp.to_i
+
+def create_pokemons(quantity)
+  pokemons = []
   quantity.times do
-    print('Enter pokemons name: ')
+    # print('Enter pokemons name: ')
     name = gets.chomp
-    print('Enter pokemons color: ')
+    # print('Enter pokemons color: ')
     color = gets.chomp
-    pokemons.push({ 'name' => name, 'color' => color })
+    pokemons.push({ 'name': name, 'color': color })
   end
-  puts("Congratulations! You create this pokemons: #{pokemons}")
+  pokemons
 end
 
-puts create_pokemons
+puts create_pokemons(quantity)
