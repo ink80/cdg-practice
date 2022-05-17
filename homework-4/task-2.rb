@@ -1,4 +1,3 @@
-
 DB_FILE = 'db_task2.txt'
 RESULT_FILE = 'result.txt'
 
@@ -7,9 +6,9 @@ def index(file)
 end
 
 def file_list(file)
-    list = []
-    File.foreach(file) { |line|  list << line }
-    list
+  list = []
+  File.foreach(file) { |line| list << line }
+  list
 end
 
 def find(file)
@@ -29,11 +28,11 @@ end
 def proccess_file
   index(DB_FILE)
   list = file_list(DB_FILE)
-  
+
   print('Введите возраст: ')
   lines = find(DB_FILE)
   result_list = []
-  if list.length > 0 && !results_array.include?(line) 
+  if list.length.!empty? && !results_array.include?(line)
     lines.each do |line|
       result_list << line
       write_result(RESULT_FILE, line)
